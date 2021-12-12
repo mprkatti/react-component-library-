@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    html {
+    background-color: black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+p {
+    font-size: 3em;
+    font-weight: bold;
+    color: #e52e71;
+    margin-bottom: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 3em 1em 3em 1em;
+    position: relative;
+}
+
+.letter-container {
+    position: absolute;
+    bottom: 0.5em;
+}
+
+.height-fix {
+    line-height: 0.55;
+}
+
+.margin-fix {
+    margin-top: 0;
+}
+
+.adjust {
+    /*  to align the items with varying line-heights */
+    padding-bottom: 0.25em;
+}
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -15px, 0);
+    }
+}
+
+.bounce {
+    animation: bounce 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <section>
+        <div class="letter-container">
+            <p>.ı</p>
+        </div>
+    </section>
+    <section>
+        <div class="letter-container">
+            <p class="margin-fix">.</p>
+            <p class="margin-fix">ı</p>
+        </div>
+
+    </section>
+    <section>
+        <div class="letter-container">
+            <p class="height-fix margin-fix">.</p>
+            <p class="adjust height-fix margin-fix">ı</p>
+        </div>
+    </section>
+    <section>
+        <div class="letter-container">
+            <p class="bounce height-fix margin-fix">.</p>
+            <p class="adjust height-fix margin-fix">ı</p>
+        </div>
+    </section>
+</main>
+</body>
+</html>
