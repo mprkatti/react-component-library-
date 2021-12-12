@@ -1,0 +1,14 @@
+.App {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content : center;
+
+}
+
+.error {
+
+  border: 1px solid red;
+}
+
